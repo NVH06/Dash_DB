@@ -1,14 +1,10 @@
 from dash import Dash
 from src.layout import create_layout
-from dash_bootstrap_components.themes import BOOTSTRAP
-#jefggjgis
+from dash_bootstrap_components.themes import LUX
 
-def main() -> None:
-    app = Dash(external_stylesheets=[BOOTSTRAP])
-    app.title = "Dashboard"
-    app.layout = create_layout(app)
-    app.run()
+app = Dash(__name__, external_stylesheets=[LUX])
+app.title = "DASHBOARD"
+app.layout = create_layout(app)
 
 if __name__ == "__main__":
-    main()
-
+    app.run_server(debug=False)

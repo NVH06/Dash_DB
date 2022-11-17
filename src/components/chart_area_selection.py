@@ -10,7 +10,9 @@ def render(app: Dash) -> html.Div:
                 id=ids.AREA_CHECKLIST,
                 options=[{"label": area, "value": area} for area in areas],
                 value=areas,
-                inline=False
+                inline=False,
+                inputStyle={"margin-right": "5px",
+                            "margin-left": "15px"}
             )
         ]
     )

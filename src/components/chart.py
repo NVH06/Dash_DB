@@ -21,6 +21,11 @@ def render(app: Dash) -> html.Div():
             y=GraphSchema.RETURN,
             color=GraphSchema.CATEGORY
         )
+        ytd_graph.update_layout(
+            legend=dict(
+                orientation="h"),
+            legend_title_text=''
+        )
         return html.Div(dcc.Graph(figure=ytd_graph), id=ids.YTD_GRAPH)
 
     return html.Div(id=ids.YTD_GRAPH)
